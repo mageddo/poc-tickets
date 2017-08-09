@@ -20,7 +20,7 @@ it's a website where the stackholder can access to reserve your ticket to watch 
 
 ### Project issues to be solved
 * The seats screen access is very high
-* The system primarly uses a relational database and the simultaneos access are more than the database server capacity
+* The system primarly uses a relational database and the simultaneos access are more than the database server capacity and
 	* Increase the database server capacity is not a option
 * The transactional (payment part) and the seats status must to be in relational database 
 
