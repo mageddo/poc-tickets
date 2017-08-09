@@ -1,11 +1,36 @@
-apply plugin: 'java'
-
-repositories {
-	jcenter()
+buildscript {
+	repositories {
+		mavenCentral()
+		jcenter()
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
 }
 
 allprojects {
+
+	apply plugin: 'java'
+	repositories {
+		mavenCentral()
+		jcenter()
+	}
+
 	dependencies {
 		testCompile 'junit:junit:4.12'
+	}
+}
+
+project(":tk-reserve") {
+
+	apply plugin: "org.springframework.boot"
+	
+	group 'com.mageddo.tickets.reserve'
+	version '0.1.0'
+
+	sourceCompatibility = 1.8
+
+	dependencies {
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.6.RELEASE'
 	}
 }
